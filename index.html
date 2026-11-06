@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double R : Burgers à Yverdon-les-Bains</title>
+<meta name="description" content="Double R, bar à burgers à Yverdon-les-Bains. Viande des fermes environnantes, pain de la boulangerie du coin, sauce maison, terrasse ombragée. Rue du Collège 4, 1400 Yverdon-les-Bains.">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#menu" data-i18n="skip">Aller à la carte</a>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="top">
+  <a class="wordmark" href="#top" aria-label="Double R">
+    <span class="wordmark-main">Double R</span>
+    <span class="wordmark-sub" data-i18n="wordmarkSub">Burgers · Yverdon-les-Bains</span>
+  </a>
+  <nav class="nav-links" aria-label="Navigation principale">
+    <a href="#signatures" data-i18n="navSig">Signatures</a>
+    <a href="#menu" data-i18n="navMenu">La carte</a>
+    <a href="#story" data-i18n="navStory">La maison</a>
+    <a href="#order" data-i18n="navOrder">Commander</a>
+    <a href="#visit" data-i18n="navVisit">Visite</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="lang-toggle" role="group" aria-label="Language / Langue">
+      <button type="button" class="lang-btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-nav" href="tel:+41794647795">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+41 79 464 77 95</span>
+    </a>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="Double R">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" id="heroImg" src="assets/hero-burger.webp" alt="" width="1920" height="1280" fetchpriority="high">
+    <div class="hero-shade"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badges reveal">
+      <span class="badge badge-rating">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span data-i18n="badgeRating">4,6 · plus de 960 avis Google</span>
+      </span>
+      <span class="badge badge-style">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+        <span data-i18n="badgeStyle">Bar à burgers, esprit diner</span>
+      </span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line reveal" data-i18n="h1a">Les burgers</span>
+      <span class="line reveal"><span data-i18n="h1b">dont Yverdon parle</span><span class="title-dot">.</span></span>
+    </h1>
+    <p class="hero-rotate reveal" aria-live="off">
+      <span data-i18n="heroRotatePrefix">On se fait un</span>
+      <span class="rotate-word" id="rotateWord">Sergent Jack Pepper</span><span data-i18n="heroRotateSuffix"> ?</span>
+    </p>
+    <p class="hero-lede reveal" data-i18n="heroLede">À deux pas de la place Pestalozzi, le Double R grille des burgers sans compromis : viande des fermes environnantes, pain de la boulangerie du coin, fromages fondus d’une laiterie près d’Yverdon, et une sauce maison sur chacun.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary" href="#menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+        <span data-i18n="ctaMenu">Voir la carte</span>
+      </a>
+      <a class="btn btn-ghost" href="tel:+41794647795">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+        <span data-i18n="ctaReserve">Réserver</span>
+      </a>
+      <a class="btn btn-ghost" href="tel:+41794647795">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="ctaCall">Appeler</span>
+      </a>
+    </div>
+    <p class="hero-note reveal" data-i18n="heroNote">Petite salle, grande réputation : la réservation est conseillée.</p>
+    <div class="hero-facts reveal">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Rue du Collège 4, 1400 Yverdon-les-Bains
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span data-i18n="heroFactHours">Mar à sam, midi 11h00-13h30 et soir 18h00-21h30 · fermé dim. et lun.</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLAME DIVIDER ============ -->
+<div class="strip" aria-hidden="true">
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
+
+<!-- ============ SIGNATURES ============ -->
+<section class="section section-cream" id="signatures">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="sigTitle">Les burgers dont tout le monde parle</h2>
+      <p class="section-sub" data-i18n="sigSub">Ceux qui reviennent dans les avis, encore et encore : le poivré, les frites, l’énorme et le feu de la grille.</p>
+    </header>
+    <div class="sig-grid">
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/jack-pepper.webp" alt="Burger au steak poivré, fromage fondu et sauce crémeuse au poivre" width="1280" height="1920" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-fav" data-i18n="tagFav">Préféré des habitués</span></div>
+          <h3>Sergent Jack Pepper</h3>
+          <p data-i18n="sig1Desc">Le signature de la maison : un steak poivré, une sauce qui a fait sa réputation, et les frites maison à côté. En version maxi pour les grandes faims.</p>
+        </div>
+      </article>
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/fries.webp" alt="Panier de frites maison dorées au paprika et oignons caramélisés, mayonnaise maison" width="1120" height="2240" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-fav" data-i18n="tagFav">Préféré des habitués</span></div>
+          <h3 data-i18n="sig2Name">Frites maison</h3>
+          <p data-i18n="sig2Desc">Fines, dorées, relevées au paprika et aux oignons caramélisés à la bière. Les avis en parlent presque autant que des burgers.</p>
+        </div>
+      </article>
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/mastodonte.webp" alt="Énorme burger double steak, bacon et oignons frits, verre de bière à côté" width="1920" height="1280" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-big" data-i18n="tagBig">Le géant</span></div>
+          <h3 data-i18n="sig3Name">Le Mastodonte</h3>
+          <p data-i18n="sig3Desc">Le géant de la carte. Les habitués le recommandent « pour mourir de bonheur » : à partager, ou pas.</p>
+        </div>
+      </article>
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/grill.webp" alt="Steaks de bœuf sur la grille, flammes et fromage en train de fondre" width="1600" height="1600" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-fav" data-i18n="tagFav">Préféré des habitués</span></div>
+          <h3 data-i18n="sig4Name">Tout passe par la grille</h3>
+          <p data-i18n="sig4Desc">Steaks grillés à la commande, fromages fondus d’une laiterie près d’Yverdon, pain frais de la boulangerie du coin.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="sig-more reveal">
+      <h3 data-i18n="sigMoreTitle">Et aussi, à la carte</h3>
+      <ul class="sig-list">
+        <li>
+          <div class="sig-list-item-top"><h4>Mig Bach</h4></div>
+          <p data-i18n="sl1Desc">L’autre nom que les habitués citent avec le Jack Pepper. Si vous hésitez, c’est celui-là.</p>
+        </li>
+        <li>
+          <div class="sig-list-item-top"><h4>Flat Earth</h4></div>
+          <p data-i18n="sl2Desc">« Le meilleur burger que j’ai mangé de toute ma vie », dit un avis. Rien de moins.</p>
+        </li>
+        <li>
+          <div class="sig-list-item-top"><h4>Pistolero</h4></div>
+          <p data-i18n="sl3Desc">Repéré sur les photos des clients : rien que le nom donne le ton de la maison.</p>
+        </li>
+        <li>
+          <div class="sig-list-item-top"><h4 data-i18n="sl4Name">Burger végétarien</h4><span class="tag tag-veggie" data-i18n="tagVeggie">Végétarien</span></div>
+          <p data-i18n="sl4Desc">Parce qu’un bon bar à burgers pense à tout le monde : la version végétarienne est bien à la carte.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="section section-char" id="menu">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="menuTitle">Les burgers, et le reste</h2>
+      <p class="section-sub section-sub-light" data-i18n="menuSub">Les noms sont ceux de la carte et des avis des clients. Tout burger s’accompagne d’une sauce maison, avec salade ou frites au paprika et oignons caramélisés à la bière.</p>
+    </header>
+
+    <div class="menu-grid">
+      <div class="menu-col reveal">
+        <h3 class="menu-cat" data-i18n="catBurgers">Les burgers</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4>Sergent Jack Pepper</h4><span class="tag tag-fav" data-i18n="tagFav">Préféré des habitués</span></div>
+            <p data-i18n="mJack">Le fameux. Steak poivré, sauce maison, frites maison. Existe aussi en version maxi.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mMastoName">Le Mastodonte</h4><span class="tag tag-big" data-i18n="tagBig">Le géant</span></div>
+            <p data-i18n="mMasto">Le plus gros de la maison, pensé pour les très grandes faims, et pour les défis entre amis.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4>Mig Bach</h4></div>
+            <p data-i18n="mMig">Le préféré de beaucoup d’habitués, généreux et sans chichi.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4>Flat Earth</h4></div>
+            <p data-i18n="mFlat">Celui qui a valu à un client son « meilleur burger de toute ma vie ».</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4>Pistolero</h4></div>
+            <p data-i18n="mPist">Un nom aperçu sur les photos des clients, bien dans l’esprit décalé de la carte.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mClassicName">Le Classique</h4></div>
+            <p data-i18n="mClassic">Le burger dans sa forme la plus pure : steak des fermes environnantes, pain du coin, sauce maison.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mBaconName">Burger au bacon</h4></div>
+            <p data-i18n="mBacon">Avec du bacon grillé, pour les puristes du genre.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mDoubleName">Le Double</h4></div>
+            <p data-i18n="mDouble">Double steak, double plaisir : la réponse de la maison aux grandes faims, un cran sous le Mastodonte.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mVegName">Burger végétarien</h4><span class="tag tag-veggie" data-i18n="tagVeggie">Végétarien</span></div>
+            <p data-i18n="mVeg">La version sans viande, avec la même sauce maison et le même soin.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-col reveal">
+        <h3 class="menu-cat" data-i18n="catOther">Autres assiettes</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mTunaName">Steak de thon</h4></div>
+            <p data-i18n="mTuna">L’alternative de la maison au burger de bœuf, pour les envies de poisson.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4>Paninis</h4></div>
+            <p data-i18n="mPanini">Des paninis et des sandwichs chauds, pour les petites faims et les pauses rapides.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mSaladName">Salade d’accompagnement</h4></div>
+            <p data-i18n="mSalad">Fraîche et croquante, en accompagnement ou en entrée légère.</p>
+          </li>
+        </ul>
+
+        <h3 class="menu-cat menu-cat-spaced" data-i18n="catSides">Accompagnements et sauces</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mFriesName">Frites maison</h4><span class="tag tag-fav" data-i18n="tagFav">Préféré des habitués</span></div>
+            <p data-i18n="mFries">Les frites dont tout le monde parle : fines, dorées, faites maison.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mSeasonedName">Frites épicées</h4></div>
+            <p data-i18n="mSeasoned">Relevées au paprika et aux oignons caramélisés à la bière : l’accompagnement signature des burgers.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mSauceName">Sauce maison</h4></div>
+            <p data-i18n="mSauce">Chaque burger part avec sa sauce maison. Mayonnaise maison aussi, pour les frites.</p>
+          </li>
+        </ul>
+
+        <h3 class="menu-cat menu-cat-spaced" data-i18n="catDessert">Desserts et boissons</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4>Cheesecake</h4></div>
+            <p data-i18n="mCheese">Le dessert de la carte, pour finir sur une note douce.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mBeerName">Bières</h4></div>
+            <p data-i18n="mBeer">De bonnes bières pour accompagner les burgers, sur place ou en terrasse.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mSoftName">Boissons fraîches</h4></div>
+            <p data-i18n="mSoft">Softs et boissons fraîches pour toute la table.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mCoffeeName">Café</h4></div>
+            <p data-i18n="mCoffee">Un café pour terminer, esprit diner oblige.</p>
+          </li>
+        </ul>
+        <div class="menu-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <p data-i18n="menuNote">Les prix ne sont pas publiés en ligne : ils vous sont confirmés au téléphone ou sur place. Cette carte reprend les plats attestés par la maison et les avis des clients.</p>
+        </div>
+        <a class="btn btn-primary btn-block" href="tel:+41794647795">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="menuCta">Commander par téléphone</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="section section-cream" id="story">
+  <div class="wrap story-grid">
+    <div class="story-card reveal">
+      <div class="story-media"><img src="assets/terrace.webp" alt="Terrasse ombragée dans une ruelle de la vieille ville, tables en bois et collines du Jura au loin" width="1920" height="1280" loading="lazy"></div>
+      <div class="strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <dl class="fact-list">
+        <div class="fact-row"><dt data-i18n="factQuartLbl">Quartier</dt><dd data-i18n="factQuartVal">Vieille ville d’Yverdon</dd></div>
+        <div class="fact-row"><dt data-i18n="factTerrLbl">Terrasse</dt><dd data-i18n="factTerrVal">Ombragée, vue sur le Jura</dd></div>
+        <div class="fact-row"><dt data-i18n="factProdLbl">Produits</dt><dd data-i18n="factProdVal">Fermes, boulangerie, laiterie d’ici</dd></div>
+        <div class="fact-row"><dt data-i18n="factNoteLbl">Avis Google</dt><dd data-i18n="factNoteVal">4,6 sur 5</dd></div>
+      </dl>
+      <p class="story-card-note" data-i18n="storyCardNote">Sans chichi, généreux, un peu décalé : c’est ce que les avis retiennent.</p>
+    </div>
+    <div class="story-copy">
+      <h2 class="reveal" data-i18n="storyTitle">Un petit resto, une grande réputation</h2>
+      <p class="reveal" data-i18n="storyP1">Rue du Collège, à la lisière de la vieille ville, le Double R fait une chose, et il la fait sans compromis : des burgers. La viande vient des fermes environnantes, les légumes sont cultivés dans la région, le pain est préparé par une boulangerie bien connue du coin et les fromages fondus arrivent d’une laiterie située non loin d’Yverdon.</p>
+      <p class="reveal" data-i18n="storyP2">Le reste se lit dans les avis : des habitués qui reviennent depuis plus de dix ans, des frites maison au paprika et aux oignons caramélisés à la bière, une sauce maison sur chaque burger, et un service rapide qui a le sourire. Le théâtre de l’Échandole, lui, tranche : « les meilleurs burgers d’Yverdon ».</p>
+      <p class="reveal" data-i18n="storyP3">Le nom ? Un clin d’œil des connaisseurs au Double R Diner de Twin Peaks, la série culte de David Lynch. Les burgers portent des noms du même esprit (Sergent Jack Pepper, Mastodonte, Mig Bach, Flat Earth), et la salle garde un air rétro et décalé que les clients adorent.</p>
+      <ul class="story-chips reveal">
+        <li data-i18n="chip1">Viande des fermes environnantes</li>
+        <li data-i18n="chip2">Sauce maison sur chaque burger</li>
+        <li data-i18n="chip3">Terrasse ombragée</li>
+        <li data-i18n="chip4">Sur place ou à emporter</li>
+      </ul>
+      <div class="story-rating reveal">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <p><strong>4,6</strong> <span data-i18n="storyRating">étoiles sur plus de 960 avis Google. Les clients citent la viande, les sauces maison, les frites, et l’ambiance.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="section section-paper" id="trust">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="trustTitle">Bon à savoir avant de venir</h2>
+    </header>
+    <div class="trust-grid">
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3 data-i18n="trust1Title">Noté 4,6 étoiles</h3>
+        <p data-i18n="trust1Desc">Plus de 960 avis Google, et des habitués fidèles depuis plus de dix ans : la réputation du Double R s’est faite au bouche-à-oreille.</p>
+      </article>
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <h3 data-i18n="trust2Title">Terroir, sans compromis</h3>
+        <p data-i18n="trust2Desc">Viande des fermes environnantes, légumes de la région, pain de la boulangerie du coin, fromages d’une laiterie près d’Yverdon.</p>
+      </article>
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="M19.07 10.93l-1.41 1.41"/><path d="M22 22H2"/><path d="m8 6 4-4 4 4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg>
+        </div>
+        <h3 data-i18n="trust3Title">Terrasse à la vieille ville</h3>
+        <p data-i18n="trust3Desc">Une ruelle calme à la lisière de la vieille ville, des tables ombragées et le Jura au loin : les burgers se dégustent aussi dehors.</p>
+      </article>
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 data-i18n="trust4Title">Les familles sont chez elles</h3>
+        <p data-i18n="trust4Desc">Assiette pour les enfants, portions généreuses et prix doux pour la Suisse : les avis saluent un accueil sincèrement chaleureux.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDER & RESERVE ============ -->
+<section class="section section-flame" id="order">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="orderTitle">Commander, réserver, emporter</h2>
+      <p class="section-sub section-sub-light" data-i18n="orderSub">Pas de commande en ligne : ici, tout passe par un coup de fil, comme dans un vrai diner.</p>
+    </header>
+    <div class="lunch-grid">
+      <article class="lunch-card reveal">
+        <h3 data-i18n="ccTitle">À emporter, en trois temps</h3>
+        <ol class="cc-steps">
+          <li>
+            <span class="cc-num">1</span>
+            <div><strong data-i18n="cc1Title">Choisir son burger</strong><p data-i18n="cc1Desc">Parcourez la carte ci-dessus et repérez votre nom préféré.</p></div>
+          </li>
+          <li>
+            <span class="cc-num">2</span>
+            <div><strong data-i18n="cc2Title">Appeler la maison</strong><p data-i18n="cc2Desc">Un coup de fil suffit : on vous dit quand c’est prêt.</p></div>
+          </li>
+          <li>
+            <span class="cc-num">3</span>
+            <div><strong data-i18n="cc3Title">Récupérer, se régaler</strong><p data-i18n="cc3Desc">Votre burger vous attend rue du Collège 4, chaud et généreux.</p></div>
+          </li>
+        </ol>
+        <a class="btn btn-light" href="tel:+41794647795">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="ccCta">Appeler maintenant</span>
+        </a>
+      </article>
+      <article class="lunch-card reveal">
+        <h3 data-i18n="rsTitle">Réserver une table</h3>
+        <p data-i18n="rsDesc">La salle est petite et les habitués nombreux : la maison conseille de réserver, surtout le soir et le week-end. Le même numéro sert pour la terrasse dès les beaux jours.</p>
+        <div class="dl-actions">
+          <a class="btn btn-light" href="tel:+41794647795">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+            <span>+41 79 464 77 95</span>
+          </a>
+          <a class="btn btn-outline-light" href="https://www.facebook.com/Le.Double.R" target="_blank" rel="noopener"><span>Facebook</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="section section-cream" id="visit">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="visitTitle">Rue du Collège, on vous attend</h2>
+    </header>
+    <div class="visit-grid">
+      <div class="visit-card reveal">
+        <h3 data-i18n="visitAddrTitle">Adresse et contact</h3>
+        <p class="visit-addr">Double R<br>Rue du Collège 4<br>1400 Yverdon-les-Bains</p>
+        <p class="visit-line"><span data-i18n="visitPhoneLabel">Téléphone :</span> <a href="tel:+41794647795">+41 79 464 77 95</a></p>
+        <p class="visit-line"><span data-i18n="visitEmailLabel">E-mail :</span> <a href="mailto:ledoubler@icloud.com">ledoubler@icloud.com</a></p>
+        <div class="visit-actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Rue%20du%20Coll%C3%A8ge%204%2C%201400%20Yverdon-les-Bains" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span data-i18n="visitDirections">Itinéraire</span>
+          </a>
+          <a class="btn btn-ghost-dark" href="https://www.facebook.com/Le.Double.R" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/Le.Double.R" target="_blank" rel="noopener" aria-label="Facebook Double R">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+      <div class="visit-card reveal">
+        <h3 data-i18n="visitHoursTitle">Horaires de cuisine</h3>
+        <table class="hours-table">
+          <tbody>
+            <tr><th scope="row" data-i18n="dLunch">Mardi à samedi · midi</th><td>11h00 - 13h30</td></tr>
+            <tr><th scope="row" data-i18n="dEvening">Mardi à samedi · soir</th><td>18h00 - 21h30</td></tr>
+            <tr><th scope="row" data-i18n="dSunMon">Dimanche et lundi</th><td data-i18n="dClosed">Fermé</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note" data-i18n="hoursNote">Horaires de cuisine selon la brochure régionale (nov. 2026). Certains annuaires indiquent un service continu de 11h00 à 23h00 : en cas de doute, un coup de fil ou la page Facebook confirme l’horaire du jour.</p>
+        <p class="visit-service" data-i18n="visitService">Sur place dans la petite salle ou en terrasse, et tout est aussi à emporter.</p>
+      </div>
+      <div class="visit-card reveal">
+        <h3 data-i18n="visitTravelTitle">Y arriver</h3>
+        <ul class="travel-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 11h16"/><path d="M8 20l1.5-4M16 20l-1.5-4"/><circle cx="8.5" cy="13.5" r=".5"/><circle cx="15.5" cy="13.5" r=".5"/></svg>
+            <p><strong>Gare d’Yverdon-les-Bains</strong>, <span data-i18n="travelStation">à moins de cinq minutes à pied, comme la place Pestalozzi et la vieille ville.</span></p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p><strong>Rue du Collège</strong>, <span data-i18n="travelTown">une ruelle calme à la lisière de la vieille ville : la terrasse y guette le soleil, avec le Jura au loin.</span></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-mark">Double R</p>
+      <p class="footer-sub" data-i18n="footerSub">Bar à burgers · Rue du Collège 4, 1400 Yverdon-les-Bains</p>
+    </div>
+    <div class="footer-links">
+      <a href="tel:+41794647795">+41 79 464 77 95</a>
+      <a href="mailto:ledoubler@icloud.com">ledoubler@icloud.com</a>
+      <a href="https://www.facebook.com/Le.Double.R" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Rue%20du%20Coll%C3%A8ge%204%2C%201400%20Yverdon-les-Bains" target="_blank" rel="noopener">Google Maps</a>
+      <a href="#top" data-i18n="footerTop">Haut de page</a>
+    </div>
+    <p class="footer-note" data-i18n="footerNote">4,6 étoiles sur plus de 960 avis Google, fermé dimanche et lundi</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE BAR ============ -->
+<nav class="mobile-bar" aria-label="Actions rapides">
+  <a href="tel:+41794647795">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-i18n="barCall">Appeler</span>
+  </a>
+  <a href="tel:+41794647795">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+    <span data-i18n="barReserve">Réserver</span>
+  </a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Rue%20du%20Coll%C3%A8ge%204%2C%201400%20Yverdon-les-Bains" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+    <span data-i18n="barDir">Itinéraire</span>
+  </a>
+  <a href="#menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+    <span data-i18n="barMenu">Carte</span>
+  </a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
